@@ -1,5 +1,6 @@
 #Adilbek97
 # Gradle files
+#gitignore для conflict
 .gradle/
 
 # User-specific configurations
