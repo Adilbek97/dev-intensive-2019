@@ -1,6 +1,5 @@
 package ru.skillbranch.devintensive.extensions
 
-import java.lang.IllegalStateException
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -27,7 +26,7 @@ fun Date.add(value:Int, units:TimeUnits = TimeUnits.SECOND): Date {
     return this
 }
 fun Date.humanizeDiff(date:Date = Date()): String {
-    return "ddc"
+    return ""
 }
 
 enum class TimeUnits{

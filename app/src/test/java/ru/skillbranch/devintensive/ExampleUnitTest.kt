@@ -8,6 +8,7 @@ import ru.skillbranch.devintensive.extensions.add
 import ru.skillbranch.devintensive.extensions.format
 import ru.skillbranch.devintensive.extensions.toUserView
 import ru.skillbranch.devintensive.models.*
+import ru.skillbranch.devintensive.utils.Utils
 import java.util.*
 
 /**
@@ -62,6 +63,19 @@ class ExampleUnitTest {
             ${user2.lastVisit?.format()}
             ${user3.lastVisit?.format()}
         """.trimIndent())
+    }
+
+    @Test
+    fun test_format(){
+       println(Date().format("HH:mm:ss"))
+    }
+    @Test
+    fun test_toInitials(){
+       println(Utils.toInitials("john" ,"doe"))
+       println(Utils.toInitials("john", null))
+       println(Utils.toInitials(null, null))
+       println(Utils.toInitials("john" ,"doe"))
+       println(Utils.toInitials(" ", ""))
     }
 
     @Test
