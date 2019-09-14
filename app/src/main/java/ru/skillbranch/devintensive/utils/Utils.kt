@@ -1,6 +1,5 @@
 package ru.skillbranch.devintensive.utils
 
-import android.annotation.SuppressLint
 
 object Utils {
     fun parseFullName(fullName:String):Pair<String?,String?>{
