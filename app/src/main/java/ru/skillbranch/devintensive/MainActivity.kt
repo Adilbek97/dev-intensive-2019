@@ -26,15 +26,20 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         textTxt = tv_text
         messageEt = et_message
         sendBtn = iv_send
-
+        benderObj = Bender()
         val status = savedInstanceState?.getString("STATUS") ?: Bender.Status.NORMAL.name
-        val question = savedInstanceState?.getString("STATUS") ?: Bender.Question.NAME.name
+        val question = savedInstanceState?.getString("QUESTION") ?: Bender.Question.NAME.name
         benderObj = Bender(Bender.Status.valueOf(status),Bender.Question.valueOf(question))
-
         val (r,g,b) = benderObj.status.color
+        val phrase:String = benderObj.question.question
+        textTxt.text = phrase
         benderImage.setColorFilter(Color.rgb(r,g,b),PorterDuff.Mode.MULTIPLY)
 
-        benderObj = Bender()
+
+
+
+
+
 
         sendBtn.setOnClickListener(this)
     }
